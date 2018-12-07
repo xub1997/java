@@ -6,12 +6,12 @@ import java.util.Random;
 public class TestSort {
     public static void main(String args[]){
         //测试元素（根据自己的需要修改个数、范围）
-        int[] numbers=new int[10];
+        int[] numbers=new int[1000];
         Random random=new Random();
 
-        for(int i=0;i<10;i++){
+        for(int i=0;i<1000;i++){
             //生成1-100之间的随机数
-            numbers[i]= random.nextInt(100)+1;
+            numbers[i]= random.nextInt(1000)+1;
         }
         System.out.println("原数组："+ Arrays.toString(numbers));
         //结果
@@ -51,14 +51,14 @@ public class TestSort {
         spend=end-start;
         System.out.println("堆排序结果："+Arrays.toString(result6)+"\n耗时："+spend/1000+"毫秒");
         start=System.nanoTime();
-        int[] result7=QuickSort.Sort(numbers);
+        int[] result7=MergeSort.Sort(numbers);
         end=System.nanoTime();
         spend=end-start;
-        System.out.println("快速排序结果："+Arrays.toString(result7)+"\n耗时："+spend/1000+"毫秒");
-        start=System.nanoTime();
-        int[] result8=MergeSort.Sort(numbers);
+        System.out.println("归并排序结果："+Arrays.toString(result7)+"\n耗时："+spend/1000+"毫秒");
+        /*start=System.nanoTime();
+        int[] result8=QuickSort.Sort(numbers);
         end=System.nanoTime();
         spend=end-start;
-        System.out.println("归并排序结果："+Arrays.toString(result8)+"\n耗时："+spend/1000+"毫秒");
+        System.out.println("快速排序结果："+Arrays.toString(result8)+"\n耗时："+spend/1000+"毫秒");*/
     }
 }
