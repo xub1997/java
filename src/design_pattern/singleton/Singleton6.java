@@ -11,15 +11,20 @@ public class Singleton6 {
 
     /**
      * 静态内部类（线程安全，延迟加载）
+     * 当 Singleton 类被加载时，静态内部类 SingletonHolder 没有被加载进内存。
+     * 只有当调用 getInstance() 方法从而触发 SingletonHolder.INSTANCE 时 SingletonHolder 才会被加载，
+     * 此时初始化 INSTANCE 实例，并且 JVM 能确保 INSTANCE 只被实例化一次。
+     *
+     * 这种方式不仅具有延迟初始化的好处，而且由 JVM 提供了对线程安全的支持
      */
     private Singleton6(){
     }
 
     public static Singleton6 getInstance(){
-        return Singleton.INSTANCE;
+        return SingletonHolder.INSTANCE;
     }
 
-    private static class Singleton{
+    private static class SingletonHolder{
         private static final Singleton6 INSTANCE = new Singleton6();
     }
 }

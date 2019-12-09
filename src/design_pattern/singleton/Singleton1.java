@@ -6,13 +6,23 @@ package design_pattern.singleton;
  * @create: 2019-12-06 10:35
  * <p>
  * CopyRight &copy; All rights reserved.
+ * 单例模式：
+ *  Examples（案例）：
+ *      Logger Classes
+ *      Configuration Classes
+ *      Accesing resources in shared mode
+ *      Factories implemented as Singletons
+ *  JDK(出现的地方)：
+ *      java.lang.Runtime#getRuntime()
+ *      java.awt.Desktop#getDesktop()
+ *      [java.lang.System#getSecurityManager()](
  **/
 public class Singleton1 {
 
     /**
      * 饿汉式单例（线程安全）
      * 优点：简单粗暴、类加载的时候就初始化完成，线程安全；
-     * 缺点：类加载的时候就已经完成初始化，如果该对象使用时机比较晚，或者始终没有用到，会造成不必要的内存资源浪费。
+     * 缺点：类加载的时候就已经完成初始化，如果该对象使用时机比较晚，或者始终没有用到，会造成不必要的内存资源浪费（丢失了延迟实例化带来的节约资源的好处）。
      */
     private Singleton1() {
     }
