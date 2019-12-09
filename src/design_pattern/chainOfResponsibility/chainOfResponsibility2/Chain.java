@@ -30,9 +30,7 @@ public abstract class Chain {
         } else if (this.type.intValue() == responsibility.getType().intValue()) {
             currentType.getChain().process(responsibility);
         } else {
-            if (nextChain == null) {
-                System.out.println("没有下级处理");
-            } else {
+            if (nextChain != null) {
                 System.out.println("--------流转下级处理-------------");
                 nextChain.handle(responsibility);
             }
