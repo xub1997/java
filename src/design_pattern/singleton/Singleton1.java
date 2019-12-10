@@ -23,6 +23,13 @@ public class Singleton1 {
      * 饿汉式单例（线程安全）
      * 优点：简单粗暴、类加载的时候就初始化完成，线程安全；
      * 缺点：类加载的时候就已经完成初始化，如果该对象使用时机比较晚，或者始终没有用到，会造成不必要的内存资源浪费（丢失了延迟实例化带来的节约资源的好处）。
+     *
+     * 注意：
+     * 为了防止单例模式被破坏，我们可以：不实现 Cloneable 接口；或者把 clone 方法改为如下
+     *      @Override
+     *     protected Object clone() throws CloneNotSupportedException {
+     *         return getInstance();
+     *     }
      */
     private Singleton1() {
     }

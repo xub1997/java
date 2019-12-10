@@ -17,6 +17,12 @@ public class Singleton5 {
      * 加锁操作只需要对实例化那部分的代码进行，只有当 instance 没有被实例化时，才需要进行加锁。
      *
      * 双重校验锁先判断 instance 是否已经被实例化，如果没有被实例化，那么才对实例化语句进行加锁。
+     * 注意：
+     * 为了防止单例模式被破坏，我们可以：不实现 Cloneable 接口；或者把 clone 方法改为如下
+     *      @Override
+     *     protected Object clone() throws CloneNotSupportedException {
+     *         return getInstance();
+     *     }
      */
     private Singleton5() {
     }

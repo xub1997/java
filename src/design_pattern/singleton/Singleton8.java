@@ -10,6 +10,12 @@ package design_pattern.singleton;
 public class Singleton8 {
     /**
      * 饿汉式变种（静态代码块实例化对象，线程安全）
+     * 注意：
+     * 为了防止单例模式被破坏，我们可以：不实现 Cloneable 接口；或者把 clone 方法改为如下
+     *      @Override
+     *     protected Object clone() throws CloneNotSupportedException {
+     *         return getInstance();
+     *     }
      */
     private Singleton8() {
     }

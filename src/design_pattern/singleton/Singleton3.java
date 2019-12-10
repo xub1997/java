@@ -11,6 +11,12 @@ public class Singleton3 {
 
     /**
      * 懒汉式单例：同步对象，线程不安全（未考虑指令重排）
+     * 注意：
+     * 为了防止单例模式被破坏，我们可以：不实现 Cloneable 接口；或者把 clone 方法改为如下
+     *      @Override
+     *     protected Object clone() throws CloneNotSupportedException {
+     *         return getInstance();
+     *     }
      */
     private Singleton3() {
     }

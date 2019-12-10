@@ -14,6 +14,12 @@ public class Singleton4 {
      * 优点：延迟初始化，避免了不必要的内存开销,且线程安全；
      * 缺点：效率偏低，每次获取实例都进行同步锁，事实上只需要在第一次new对象的时候同步锁就行了，后续想获取实例可以直接返回。
      * 该方法有性能问题，不推荐使用
+     * 注意：
+     * 为了防止单例模式被破坏，我们可以：不实现 Cloneable 接口；或者把 clone 方法改为如下
+     *      @Override
+     *     protected Object clone() throws CloneNotSupportedException {
+     *         return getInstance();
+     *     }
      */
     private Singleton4(){
     }
