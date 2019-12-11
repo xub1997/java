@@ -7,5 +7,5 @@ package design_pattern.memento.memento2;
  * <p>
  * CopyRight &copy; All rights reserved.
  **/
-public class Memento {
+public interface MementoIF {
 }

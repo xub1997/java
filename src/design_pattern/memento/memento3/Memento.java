@@ -1,4 +1,4 @@
-package design_pattern.memento.memento1;
+package design_pattern.memento.memento3;
 
 /**
  * @description: 备忘录
@@ -26,4 +26,10 @@ public class Memento {
         this.state = state;
     }
 
+    @Override
+    public String toString() {
+        return "Memento{" +
+                "state=" + state +
+                '}';
+    }
 }

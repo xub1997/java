@@ -1,13 +1,13 @@
-package design_pattern.memento.memento1;
+package design_pattern.memento.memento2;
 
 /**
  * @description:
  * @author: 黎清许
- * @create: 2019-12-10 18:01
+ * @create: 2019-12-11 09:41
  * <p>
  * CopyRight &copy; All rights reserved.
  **/
-public class MementoClient1 {
+public class MementoClient2 {
 
     /**
      * 备忘录模式角色：
@@ -22,21 +22,21 @@ public class MementoClient1 {
      *   2. 宽接口:
      *     允许它读取所有的数据，以便根据这些数据恢复这个发起人对象的内部状态。针对发起人。
      *
-     * 白箱模式：
-     * 将发起人角色的状态存储在一个大家都看得到的地方，备忘录角色的内部所存储的状态就对所有对象公开。因此这个实现又叫做“白箱实现”。
+     * 黑箱模式：
+     * 备忘录角色对发起人（Originator）角色对象提供一个宽接口，而为其他对象提供一个窄接口。
+     * 这样的实现叫做“黑箱实现”。 简单说就是备忘录是一个接口，实现类放到发起人里面去了，外界看不见。
      * @param args
      */
     public static void main(String[] args) {
         Originator originator = new Originator();
         originator.setState(new State("开始状态"));
-        System.out.println(String.format("对象的属性： %s",originator.getState()));
-        Memento memento = originator.createMemento();
+        System.out.println(String.format("对象的状态： %s",originator.getState()));
         Caretaker caretaker = new Caretaker();
-        caretaker.setMemento(memento);
+        caretaker.setMemento(originator.createMemento());
         originator.setState(new State("游戏状态"));
         System.out.println("开始回滚");
-        System.out.println(String.format("回滚前对象的属性： %s",originator.getState()));
+        System.out.println(String.format("回滚前对象的状态： %s",originator.getState()));
         originator.restore(caretaker.getMemento());
-        System.out.println(String.format("回滚后对象的属性： %s",originator.getState()));
+        System.out.println(String.format("回滚后对象的状态： %s",originator.getState()));
     }
 }

@@ -1,4 +1,4 @@
-package design_pattern.memento.memento1;
+package design_pattern.memento.memento3;
 
 /**
  * @description: 原始对象
@@ -8,7 +8,10 @@ package design_pattern.memento.memento1;
  * CopyRight &copy; All rights reserved.
  **/
 public class Originator {
+
     private State state;
+
+
 
     public State getState() {
         return state;
@@ -25,4 +28,6 @@ public class Originator {
     public void restore(Memento memento) {
         this.setState(memento.getState());
     }
+
+
 }

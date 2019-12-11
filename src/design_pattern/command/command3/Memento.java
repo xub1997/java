@@ -1,4 +1,4 @@
-package design_pattern.memento.memento1;
+package design_pattern.command.command3;
 
 /**
  * @description: 备忘录
