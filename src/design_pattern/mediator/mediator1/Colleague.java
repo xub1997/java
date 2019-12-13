@@ -8,7 +8,7 @@ package design_pattern.mediator.mediator1;
  * CopyRight &copy; All rights reserved.
  **/
 public abstract class Colleague {
-     protected Mediator mediator;
+    protected Mediator mediator;
 
     public void setMediator(Mediator mediator) {
         this.mediator = mediator;
