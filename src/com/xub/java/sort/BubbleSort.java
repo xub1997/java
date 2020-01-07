@@ -13,13 +13,11 @@ public class BubbleSort {
      * @param numbers 需要排序的整型数组
      */
     public static int[] BetterSort(int[] numbers) {
-
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = i + 1; j < numbers.length; j++) {
+        int length = numbers.length;
+        for (int i = 0; i < length; i++) {
+            for (int j = i + 1; j < length; j++) {
                 if (numbers[i] > numbers[j]) {
-                    int tmp = numbers[i];
-                    numbers[i] = numbers[j];
-                    numbers[j] = tmp;
+                    swap(numbers, i, j);
                 }
             }
         }
@@ -32,19 +30,23 @@ public class BubbleSort {
      * @param numbers 需要排序的整型数组
      * */
     public static int[] Sort(int[] numbers) {
-        int temp = 0;
-        for (int i = 0; i < numbers.length - 1; i++) {
+        int length = numbers.length;
+        for (int i = 0; i < length - 1; i++) {
             //前面的已经比较过，可以忽略（减去i个数）
-            for (int j = 0; j < numbers.length - 1 - i; j++) {
+            for (int j = 0; j < length - 1 - i; j++) {
                 if (numbers[j] > numbers[j + 1])  //交换两数位置
                 {
-                    temp = numbers[j];
-                    numbers[j] = numbers[j + 1];
-                    numbers[j + 1] = temp;
+                    swap(numbers, i, j);
                 }
             }
         }
         return numbers;
+    }
+
+    private static void swap(int[] numbers, int i, int j) {
+        int temp = numbers[j];
+        numbers[j] = numbers[j + 1];
+        numbers[j + 1] = temp;
     }
 
 

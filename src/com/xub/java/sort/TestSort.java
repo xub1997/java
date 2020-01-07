@@ -3,7 +3,7 @@ package com.xub.java.sort;
 import java.util.Arrays;
 import java.util.Random;
 
-public class TestSort {
+public class  TestSort {
     public static void main(String args[]) {
         //测试元素（根据自己的需要修改个数、范围）
         int[] numbers = new int[100];

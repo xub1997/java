@@ -1,6 +1,6 @@
 package com.xub.java.sort;
 
-public class HeapSort {
+public class  HeapSort {
 
     /*
     * 堆排序是一种树形选择排序，是对直接选择排序的有效改进。
