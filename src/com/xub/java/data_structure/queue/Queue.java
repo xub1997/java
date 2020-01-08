@@ -1,4 +1,4 @@
-package com.xub.java.data.structure.queue;
+package com.xub.java.data_structure.queue;
 
 /**
  * @Name: Queue

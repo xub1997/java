@@ -1,4 +1,4 @@
-package com.xub.java.data.structure.stack;
+package com.xub.java.data_structure.stack;
 
 /**
  * @Name: Stack

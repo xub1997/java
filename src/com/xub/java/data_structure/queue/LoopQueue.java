@@ -1,14 +1,14 @@
-package com.xub.java.data.structure.queue;
+package com.xub.java.data_structure.queue;
 
 import java.util.Arrays;
 
 /**
  * @author xub
- * @Name: CircularQueue 循环队列
+ * @Name: LoopQueue 循环队列
  * @Description: TODO
  * @date 2020/1/7  16:09
  */
-public class CircularQueue<E> implements Queue<E> {
+public class LoopQueue<E> implements Queue<E> {
 
     private E[] data;
 
@@ -32,7 +32,7 @@ public class CircularQueue<E> implements Queue<E> {
      */
     private int capacity;
 
-    public CircularQueue(int capacity) {
+    public LoopQueue(int capacity) {
         data = (E[]) new Object[capacity + 1];
         this.capacity = capacity;
         this.size = 0;
@@ -40,7 +40,7 @@ public class CircularQueue<E> implements Queue<E> {
         this.tail = 0;
     }
 
-    public CircularQueue() {
+    public LoopQueue() {
         this(10);
     }
 
@@ -134,7 +134,7 @@ public class CircularQueue<E> implements Queue<E> {
 
     @Override
     public String toString() {
-        return "CircularQueue{" +
+        return "LoopQueue{" +
                 "data=" + Arrays.toString(data) +
                 ", front=" + front +
                 ", tail=" + tail +
@@ -144,30 +144,30 @@ public class CircularQueue<E> implements Queue<E> {
     }
 
     public static void main(String[] args) {
-        CircularQueue<Integer> circularQueue = new CircularQueue<>();
-        System.out.println(circularQueue.getCapacity());
-        System.out.println(circularQueue.getSize());
-        System.out.println(circularQueue.queueSize());
-        System.out.println(circularQueue.isEmpty());
+        LoopQueue<Integer> loopQueue = new LoopQueue<>();
+        System.out.println(loopQueue.getCapacity());
+        System.out.println(loopQueue.getSize());
+        System.out.println(loopQueue.queueSize());
+        System.out.println(loopQueue.isEmpty());
         for (int i = 0; i < 10; i++) {
-            circularQueue.enqueue(i);
-            System.out.println(circularQueue.getFront());
-            System.out.println(circularQueue.getTail());
-            System.out.println(circularQueue);
+            loopQueue.enqueue(i);
+            System.out.println(loopQueue.getFront());
+            System.out.println(loopQueue.getTail());
+            System.out.println(loopQueue);
 //            if (i % 2 == 0) {
-//                circularQueue.dequeue();
-//                if(!circularQueue.isEmpty()){
-//                    System.out.println(circularQueue.getFront());
-//                    System.out.println(circularQueue.getTail());
+//                loopQueue.dequeue();
+//                if(!loopQueue.isEmpty()){
+//                    System.out.println(loopQueue.getFront());
+//                    System.out.println(loopQueue.getTail());
 //                }
-//                System.out.println(circularQueue);
+//                System.out.println(loopQueue);
 //            }
         }
-        System.out.println(circularQueue.isEmpty());
-        System.out.println(circularQueue.getFront());
-        System.out.println(circularQueue.getTail());
-        System.out.println(circularQueue.getCapacity());
-        System.out.println(circularQueue.getSize());
-        System.out.println(circularQueue.queueSize());
+        System.out.println(loopQueue.isEmpty());
+        System.out.println(loopQueue.getFront());
+        System.out.println(loopQueue.getTail());
+        System.out.println(loopQueue.getCapacity());
+        System.out.println(loopQueue.getSize());
+        System.out.println(loopQueue.queueSize());
     }
 }
