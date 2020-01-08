@@ -8,7 +8,7 @@ package com.xub.java.algorithm;/**
 
 /**
  * @author xub
- * @Name: Test
+ * @Name: TestArray_Loop_LinkedList_Queue
  * @Description: TODO
  * @date 2019/12/25  20:30
  */

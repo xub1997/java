@@ -1,6 +1,6 @@
-package com.xub.java.data.structure.stack;
+package com.xub.java.data_structure.stack;
 
-import com.xub.java.data.structure.arrays.Array;
+import com.xub.java.data_structure.arrays.Array;
 
 /**
  * @author xub
@@ -81,9 +81,18 @@ public class ArrayStack<E> implements Stack<E> {
 
     @Override
     public String toString() {
-        return "ArrayStack{" +
-                "array=" + array +
-                '}';
+        StringBuilder res = new StringBuilder();
+        res.append("Stack: ");
+        res.append("top [");
+        int size = array.getSize();
+        for (int i = size - 1; i >= 0; i--) {
+            res.append(array.get(i));
+            if (i != 0) {
+                res.append(", ");
+            }
+        }
+        res.append("]");
+        return res.toString();
     }
 
     public static void main(String[] args) {
@@ -111,18 +120,18 @@ public class ArrayStack<E> implements Stack<E> {
             char c = s.charAt(i);
             if (c == '{' || c == '[' || c == '(') {
                 stack.push(c);
-            }else {
-                if(stack.isEmpty()){
+            } else {
+                if (stack.isEmpty()) {
                     return false;
                 }
                 char topChar = stack.pop();
-                if(c==')'&&topChar!='('){
+                if (c == ')' && topChar != '(') {
                     return false;
                 }
-                if(c=='{'&&topChar!='}'){
+                if (c == '{' && topChar != '}') {
                     return false;
                 }
-                if(c=='['&&topChar!=']'){
+                if (c == '[' && topChar != ']') {
                     return false;
                 }
             }

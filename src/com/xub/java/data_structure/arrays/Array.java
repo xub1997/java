@@ -1,4 +1,4 @@
-package com.xub.java.data.structure.arrays;
+package com.xub.java.data_structure.arrays;
 
 import java.util.Arrays;
 

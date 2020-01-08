@@ -1,6 +1,6 @@
-package com.xub.java.data.structure.queue;
+package com.xub.java.data_structure.queue;
 
-import com.xub.java.data.structure.arrays.Array;
+import com.xub.java.data_structure.arrays.Array;
 
 /**
  * @author xub
