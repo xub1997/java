@@ -31,6 +31,8 @@
         <spring.version>5.0.10.RELEASE</spring.version>
         <qrcode.version>3.3.3</qrcode.version>
         <fastdfs-client.version>1.26.2</fastdfs-client.version>
+        <jdom.version>2.0.5</jdom.version>
+        <dom4j.version>2.1.1</dom4j.version>
     </properties>
 
     <dependencies>
@@ -111,6 +113,18 @@
             <groupId>com.github.tobato</groupId>
             <artifactId>fastdfs-client</artifactId>
             <version>${fastdfs-client.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jdom/jdom2 -->
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>jdom2</artifactId>
+            <version>${jdom.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+        <dependency>
+            <groupId>org.dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>${dom4j.version}</version>
         </dependency>
     </dependencies>
 
