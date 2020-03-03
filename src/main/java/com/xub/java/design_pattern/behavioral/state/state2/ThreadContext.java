@@ -29,7 +29,7 @@ public class ThreadContext {
     }
 
     public void start(){
-        state = new java.lang.Runnable(this);
+        state = new Runnable(this);
     }
 
     public void getCPU(){
@@ -45,6 +45,6 @@ public class ThreadContext {
     }
 
     public void resume(){
-        state = new java.lang.Runnable(this);
+        state = new Runnable(this);
     }
 }
