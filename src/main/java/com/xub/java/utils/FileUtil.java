@@ -1,5 +1,6 @@
 package com.xub.java.utils;
 
+import com.google.common.collect.Lists;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.util.Base64Utils;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,7 +22,7 @@ public class FileUtil {
     private FileUtil() {
     }
 
-    private static List<File> files = new ArrayList<>();
+    private static List<File> files = Lists.newArrayList();
 
     /**
      * 获取指定目录的所有文件
