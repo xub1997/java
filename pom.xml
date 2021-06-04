@@ -34,7 +34,7 @@
         <jdom.version>2.0.5</jdom.version>
         <dom4j.version>2.1.1</dom4j.version>
         <guava.version>28.0-jre</guava.version>
-        <httpclient.version>4.5.10</httpclient.version>
+        <httpclient.version>4.5.13</httpclient.version>
         <commons-net.version>3.6</commons-net.version>
     </properties>
 
