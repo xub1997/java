@@ -28,7 +28,7 @@
         <poi-ooxml.version>4.1.0</poi-ooxml.version>
         <maven-compiler.version>3.3</maven-compiler.version>
         <jackson-annotations.version>2.9.0</jackson-annotations.version>
-        <spring.version>5.0.10.RELEASE</spring.version>
+        <spring.version>6.0.0</spring.version>
         <qrcode.version>3.3.3</qrcode.version>
         <fastdfs-client.version>1.26.2</fastdfs-client.version>
         <jdom.version>2.0.5</jdom.version>
